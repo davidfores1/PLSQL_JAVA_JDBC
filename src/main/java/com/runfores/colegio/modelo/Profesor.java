@@ -1,23 +1,20 @@
-package com.runfores.modelo;
+package com.runfores.colegio.modelo;
 
-import java.util.Date;
 import java.util.Objects;
 
 /**
  *
  * @author david
  */
-public class Alumno {
+public class Profesor {
     
     private Long id = null;
     private String nombre;
     private String apellido;
-    private Date fechaNacimiento;
 
-    public Alumno(String nombre, String apellido, Date fechaNacimiento) {
+    public Profesor(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
     }
 
     public Long getId() {
@@ -44,26 +41,17 @@ public class Alumno {
         this.apellido = apellido;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
     @Override
     public String toString() {
-        return "Alumno{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + '}';
+        return "Profesor{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.id);
-        hash = 17 * hash + Objects.hashCode(this.nombre);
-        hash = 17 * hash + Objects.hashCode(this.apellido);
-        hash = 17 * hash + Objects.hashCode(this.fechaNacimiento);
+        hash = 37 * hash + Objects.hashCode(this.id);
+        hash = 37 * hash + Objects.hashCode(this.nombre);
+        hash = 37 * hash + Objects.hashCode(this.apellido);
         return hash;
     }
 
@@ -78,7 +66,7 @@ public class Alumno {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Alumno other = (Alumno) obj;
+        final Profesor other = (Profesor) obj;
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
@@ -88,11 +76,8 @@ public class Alumno {
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
-        if (!Objects.equals(this.fechaNacimiento, other.fechaNacimiento)) {
-            return false;
-        }
         return true;
     }
-    
+
     
 }

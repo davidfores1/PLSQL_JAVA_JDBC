@@ -1,4 +1,4 @@
-package com.runfores.modelo;
+package com.runfores.colegio.modelo;
 
 import java.util.Objects;
 
