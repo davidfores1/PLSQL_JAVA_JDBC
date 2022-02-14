@@ -8,13 +8,13 @@ import java.util.List;
  */
 public interface DaoGenerico<T, k> {
 
-    void insertar(T a);
+    void insertar(T a) throws DAOException;
 
-    void modificar(T a);
+    void modificar(T a) throws DAOException;
 
-    void eliminar(T a);
+    void eliminar(T a) throws DAOException;
 
-    List<T> obtenerTodos();
+    List<T> obtenerTodos() throws DAOException;
 
-    T obtener(k id);
+    T obtener(k id) throws DAOException;
 }
