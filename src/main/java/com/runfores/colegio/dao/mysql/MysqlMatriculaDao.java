@@ -7,6 +7,7 @@ package com.runfores.colegio.dao.mysql;
 
 import com.runfores.colegio.dao.MatriculaDao;
 import com.runfores.colegio.modelo.Matricula;
+import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -14,6 +15,10 @@ import java.util.List;
  * @author david
  */
 public class MysqlMatriculaDao implements MatriculaDao{
+
+    MysqlMatriculaDao(Connection conn) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
     public void insertar(Matricula a) {

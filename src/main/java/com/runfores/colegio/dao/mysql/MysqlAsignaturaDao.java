@@ -2,6 +2,7 @@ package com.runfores.colegio.dao.mysql;
 
 import com.runfores.colegio.dao.AsignaturaDao;
 import com.runfores.colegio.modelo.Asignatura;
+import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -9,6 +10,10 @@ import java.util.List;
  * @author david
  */
 public class MysqlAsignaturaDao implements AsignaturaDao{
+
+    MysqlAsignaturaDao(Connection conn) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
     public void insertar(Asignatura a) {

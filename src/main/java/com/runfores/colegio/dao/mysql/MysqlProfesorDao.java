@@ -3,6 +3,7 @@ package com.runfores.colegio.dao.mysql;
 
 import com.runfores.colegio.dao.ProfesorDao;
 import com.runfores.colegio.modelo.Profesor;
+import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -10,6 +11,10 @@ import java.util.List;
  * @author david
  */
 public class MysqlProfesorDao implements ProfesorDao{
+
+    MysqlProfesorDao(Connection conn) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     @Override
     public void insertar(Profesor a) {
